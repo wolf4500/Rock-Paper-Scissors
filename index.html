@@ -92,7 +92,9 @@
           result = playRound(playerSelection, computerSelection);
           console.log(result);
         }
+      }
 
+      function gameResult() {
         if (gamesWon > computerWon) {
           console.log(
             " You win the game! " +
@@ -127,6 +129,7 @@
       }
 
       game();
+      gameResult();
     </script>
   </body>
 </html>
