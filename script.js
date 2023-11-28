@@ -87,7 +87,18 @@ function getComputerChoice() {
     result = playRound(playerSelection, computerSelection);
     console.log(result);
   };
-  
+
+  // Outputs result when clicking "Scissors" button
+  const scissors = document.getElementById("scissors");
+  scissors.addEventListener("click", game);
+  function game()
+  {
+    let computerSelection = getComputerChoice();
+    let playerSelection = "paper";
+    result = playRound(playerSelection, computerSelection);
+    console.log(result);
+  };
+
 //   function game() {
 //     for (i = 0; i < 5; i++) {
 //       let computerSelection = getComputerChoice();
