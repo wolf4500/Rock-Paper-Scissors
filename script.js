@@ -77,6 +77,17 @@ function getComputerChoice() {
     console.log(result);
   };
 
+  // Outputs result when clicking "Paper" button
+  const paper = document.getElementById("paper");
+  paper.addEventListener("click", game);
+  function game()
+  {
+    let computerSelection = getComputerChoice();
+    let playerSelection = "paper";
+    result = playRound(playerSelection, computerSelection);
+    console.log(result);
+  };
+  
 //   function game() {
 //     for (i = 0; i < 5; i++) {
 //       let computerSelection = getComputerChoice();
