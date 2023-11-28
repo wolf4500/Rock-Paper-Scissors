@@ -117,7 +117,7 @@ function getComputerChoice() {
           " Tied: " +
           tied
       );
-    } else {
+    } else if ((gamesWon == computerWon) && (gamesWon != 0 && computerWon != 0)) {
       console.log(
         "Tied game! " +
           "You: " +
@@ -130,5 +130,4 @@ function getComputerChoice() {
     }
   }
 
-  game();
   gameResult();
