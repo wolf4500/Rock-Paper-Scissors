@@ -66,6 +66,8 @@ function getComputerChoice() {
     return result;
   }
 
+  const output = document.querySelector(".result");
+
   // Outputs result when clicking "Rock" button
   const rock = document.getElementById("rock");
   rock.addEventListener("click", game);
@@ -74,30 +76,38 @@ function getComputerChoice() {
     let computerSelection = getComputerChoice();
     let playerSelection = "rock";
     result = playRound(playerSelection, computerSelection);
-    console.log(result);
+    const content = document.createElement("div");
+    content.textContent = result;
+    output.appendChild(content);
   };
 
   // Outputs result when clicking "Paper" button
   const paper = document.getElementById("paper");
-  paper.addEventListener("click", game);
-  function game()
+  paper.addEventListener("click", game2);
+  function game2()
   {
     let computerSelection = getComputerChoice();
     let playerSelection = "paper";
     result = playRound(playerSelection, computerSelection);
-    console.log(result);
+    const content = document.createElement("div");
+    content.textContent = result;
+    output.appendChild(content);
   };
 
   // Outputs result when clicking "Scissors" button
   const scissors = document.getElementById("scissors");
-  scissors.addEventListener("click", game);
-  function game()
+  scissors.addEventListener("click", game3);
+  function game3()
   {
     let computerSelection = getComputerChoice();
     let playerSelection = "paper";
     result = playRound(playerSelection, computerSelection);
-    console.log(result);
+    const content = document.createElement("div");
+    content.textContent = result;
+    output.appendChild(content);
   };
+
+  
 
 //   function game() {
 //     for (i = 0; i < 5; i++) {
